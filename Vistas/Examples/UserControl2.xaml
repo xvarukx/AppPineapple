@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Vistas.Examples.UserControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas.Examples"
+             mc:Ignorable="d" 
+             d:DesignHeight="407.098" d:DesignWidth="603.859">
+    <Grid HorizontalAlignment="Left" Height="345" Margin="33,37,0,0" VerticalAlignment="Top" Width="537">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="55,38,0,0" VerticalAlignment="Top" Height="276" Width="448"/>
+    </Grid>
+</UserControl>

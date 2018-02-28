@@ -1,0 +1,1041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE090F4B-D9D5-4FDB-8BC9-3CD754BB9752}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vistas</RootNamespace>
+    <AssemblyName>Vistas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pineapple_1_%281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.0.18\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarInformacionCedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarInformacionCedula.designer.cs">
+      <DependentUpon>AgregarInformacionCedula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BotonMapa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CambiarEstadoCedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarEstadoCedula.Designer.cs">
+      <DependentUpon>CambiarEstadoCedula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cedula.Designer.cs">
+      <DependentUpon>Cedula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CedulaAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CedulaAgregarProducto.designer.cs">
+      <DependentUpon>CedulaAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conf.cs" />
+    <Compile Include="Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion.designer.cs">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCedulaIdentidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCedulaIdentidad.designer.cs">
+      <DependentUpon>CrearCedulaIdentidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesLote.designer.cs">
+      <DependentUpon>DetallesLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElegirAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElegirAplicacion.designer.cs">
+      <DependentUpon>ElegirAplicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearMapa.Designer.cs">
+      <DependentUpon>CrearMapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fechas\Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fechas\Calendario.designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fechas\Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fechas\Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupos\CrearGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupos\CrearGrupo.Designer.cs">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupos\EditarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupos\EditarGrupo.Designer.cs">
+      <DependentUpon>EditarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupos\Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupos\Grupos.Designer.cs">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion.Designer.cs">
+      <DependentUpon>Informacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario.designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logo.Designer.cs">
+      <DependentUpon>Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogoEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogoEspera.Designer.cs">
+      <DependentUpon>LogoEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerMenu.cs" />
+    <Compile Include="MantenimientoAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoAplicacion.Designer.cs">
+      <DependentUpon>MantenimientoAplicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapa.designer.cs">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\AddBloque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\AddBloque.designer.cs">
+      <DependentUpon>AddBloque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\AddLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\AddLote.designer.cs">
+      <DependentUpon>AddLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\AddSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\AddSeccion.designer.cs">
+      <DependentUpon>AddSeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\BloqueManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\BloqueManager.designer.cs">
+      <DependentUpon>BloqueManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\BotonBloque.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mapas\BotonSeccion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mapas\DetalleLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\DetalleLote.designer.cs">
+      <DependentUpon>DetalleLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\EditBloque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\EditBloque.designer.cs">
+      <DependentUpon>EditBloque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\EditLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\EditLote.designer.cs">
+      <DependentUpon>EditLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\EditSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\EditSeccion.designer.cs">
+      <DependentUpon>EditSeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapas\Mapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapas\Mapa.designer.cs">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajes.cs" />
+    <Compile Include="NombreGrupoForza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NombreGrupoForza.designer.cs">
+      <DependentUpon>NombreGrupoForza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaciones.Designer.cs">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaqueteAplicacion\AplicacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaqueteAplicacion\AplicacionForm.designer.cs">
+      <DependentUpon>AplicacionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaqueteAplicacion\CrearPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaqueteAplicacion\CrearPaquete.Designer.cs">
+      <DependentUpon>CrearPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaqueteAplicacion\PaqueteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaqueteAplicacion\PaqueteForm.Designer.cs">
+      <DependentUpon>PaqueteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pinaDataSet.cs">
+      <DependentUpon>pinaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pinaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pinaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosAplicacion.Designer.cs">
+      <DependentUpon>ProductosAplicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores.designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CedulaForza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\CedulaForza.Designer.cs">
+      <DependentUpon>CedulaForza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CedulaReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\CedulaReporte.Designer.cs">
+      <DependentUpon>CedulaReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DGVPrinter.cs" />
+    <Compile Include="Reportes\ReportePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePedido.Designer.cs">
+      <DependentUpon>ReportePedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteProductos.Designer.cs">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seccion_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seccion_Producto.Designer.cs">
+      <DependentUpon>Seccion_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AplicarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AplicarGrupo.Designer.cs">
+      <DependentUpon>AplicarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectorSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectorSecciones.Designer.cs">
+      <DependentUpon>SelectorSecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpraysBooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpraysBooms.designer.cs">
+      <DependentUpon>SpraysBooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehiculos.designer.cs">
+      <DependentUpon>Vehiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerCedulasIdentidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerCedulasIdentidad.designer.cs">
+      <DependentUpon>VerCedulasIdentidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerGrupo.designer.cs">
+      <DependentUpon>VerGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerInformacionCedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerInformacionCedula.designer.cs">
+      <DependentUpon>VerInformacionCedula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerSecciones.designer.cs">
+      <DependentUpon>VerSecciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarInformacionCedula.resx">
+      <DependentUpon>AgregarInformacionCedula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarEstadoCedula.resx">
+      <DependentUpon>CambiarEstadoCedula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cedula.resx">
+      <DependentUpon>Cedula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CedulaAgregarProducto.resx">
+      <DependentUpon>CedulaAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearCedulaIdentidad.resx">
+      <DependentUpon>CrearCedulaIdentidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallesLote.resx">
+      <DependentUpon>DetallesLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElegirAplicacion.resx">
+      <DependentUpon>ElegirAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearMapa.resx">
+      <DependentUpon>CrearMapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fechas\Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fechas\Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupos\CrearGrupo.resx">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupos\EditarGrupo.resx">
+      <DependentUpon>EditarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupos\Grupos.resx">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacion.resx">
+      <DependentUpon>Informacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logo.resx">
+      <DependentUpon>Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogoEspera.resx">
+      <DependentUpon>LogoEspera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoAplicacion.resx">
+      <DependentUpon>MantenimientoAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapa.resx">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\AddBloque.resx">
+      <DependentUpon>AddBloque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\AddLote.resx">
+      <DependentUpon>AddLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\AddSeccion.resx">
+      <DependentUpon>AddSeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\BloqueManager.resx">
+      <DependentUpon>BloqueManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\DetalleLote.resx">
+      <DependentUpon>DetalleLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\EditBloque.resx">
+      <DependentUpon>EditBloque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\EditLote.resx">
+      <DependentUpon>EditLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\EditSeccion.resx">
+      <DependentUpon>EditSeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapas\Mapa.resx">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NombreGrupoForza.resx">
+      <DependentUpon>NombreGrupoForza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificaciones.resx">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaqueteAplicacion\AplicacionForm.resx">
+      <DependentUpon>AplicacionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaqueteAplicacion\CrearPaquete.resx">
+      <DependentUpon>CrearPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaqueteAplicacion\PaqueteForm.resx">
+      <DependentUpon>PaqueteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductosAplicacion.resx">
+      <DependentUpon>ProductosAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CedulaForza.resx">
+      <DependentUpon>CedulaForza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CedulaReporte.resx">
+      <DependentUpon>CedulaReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CedulaGrupoForza.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ListaProductos.rdlc" />
+    <EmbeddedResource Include="Reportes\NuevaCedula.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CedulaIdentidad.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePedido.resx">
+      <DependentUpon>ReportePedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteProductos.resx">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seccion_Producto.resx">
+      <DependentUpon>Seccion_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AplicarGrupo.resx">
+      <DependentUpon>AplicarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectorSecciones.resx">
+      <DependentUpon>SelectorSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpraysBooms.resx">
+      <DependentUpon>SpraysBooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehiculos.resx">
+      <DependentUpon>Vehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerCedulasIdentidad.resx">
+      <DependentUpon>VerCedulasIdentidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerGrupo.resx">
+      <DependentUpon>VerGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerInformacionCedula.resx">
+      <DependentUpon>VerInformacionCedula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerSecciones.resx">
+      <DependentUpon>VerSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Content\bootstrap-grid.css.map" />
+    <None Include="Content\bootstrap-grid.min.css.map" />
+    <None Include="Content\bootstrap-reboot.css.map" />
+    <None Include="Content\bootstrap-reboot.min.css.map" />
+    <None Include="Content\bootstrap.css.map" />
+    <None Include="Content\bootstrap.min.css.map" />
+    <None Include="packages.config" />
+    <None Include="pinaDataSet.xsc">
+      <DependentUpon>pinaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pinaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pinaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pinaDataSet.xss">
+      <DependentUpon>pinaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Scripts\bootstrap.bundle.min.js.map" />
+    <None Include="Scripts\bootstrap.js.map" />
+    <None Include="Scripts\bootstrap.min.js.map" />
+    <None Include="Scripts\esm\popper-utils.js.map" />
+    <None Include="Scripts\esm\popper-utils.min.js.map" />
+    <None Include="Scripts\esm\popper.js.map" />
+    <None Include="Scripts\esm\popper.min.js.map" />
+    <None Include="Scripts\jquery-3.0.0.min.map" />
+    <None Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <None Include="Scripts\popper-utils.js.map" />
+    <None Include="Scripts\popper-utils.min.js.map" />
+    <None Include="Scripts\popper.js.map" />
+    <None Include="Scripts\popper.min.js.map" />
+    <None Include="Scripts\README.md" />
+    <None Include="Scripts\umd\popper-utils.js.map" />
+    <None Include="Scripts\umd\popper-utils.min.js.map" />
+    <None Include="Scripts\umd\popper.js.map" />
+    <None Include="Scripts\umd\popper.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Entidades.csproj">
+      <Project>{9351bdc8-bae1-4d33-b7e1-bf47ddc7b045}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{379967d5-70e6-424f-ab91-f31fbde52cac}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter-Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter-Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dropper-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter-Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter-Edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dropper-WF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrowhead-Right-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrowhead-Left-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Door1-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prueba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloque1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloque2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garbage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garbage-Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locaSeccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seccion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View-Details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garbage-Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garbage-Closed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <None Include="Resources\zoom-in %283%29.png" />
+    <None Include="Resources\zoom-out %281%29.png" />
+    <None Include="Resources\View Details-WF.png" />
+    <None Include="Resources\zoom-in4.png" />
+    <None Include="Resources\water-supply %281%29.png" />
+    <None Include="Resources\water-supply.png" />
+    <None Include="Resources\Zoom-In21.png" />
+    <None Include="Resources\Zoom-In3.png" />
+    <None Include="Resources\Zoom-In2.png" />
+    <None Include="Resources\Zoom-In1.png" />
+    <None Include="Resources\zoom-out.png" />
+    <None Include="Resources\zoom-in.png" />
+    <None Include="Resources\16731005_10211495912461129_396619629_n.png" />
+    <None Include="Resources\pineapple.png" />
+    <None Include="Resources\16729807_10211495759337301_1670556405_n.jpg" />
+    <None Include="Resources\001-boxes.png" />
+    <None Include="Resources\002-transport.png" />
+    <None Include="Resources\003-people.png" />
+    <None Include="Resources\1491115577_tractor.png" />
+    <None Include="Resources\1491115778_profle.png" />
+    <None Include="Resources\1491115713_dolly.png" />
+    <None Include="Resources\1491115633_truck.png" />
+    <None Include="Resources\1491115721_bookshelf.png" />
+    <None Include="Resources\1491115652_gear.png" />
+    <None Include="Resources\1491115806_toolbox.png" />
+    <None Include="Resources\1491115668_easel.png" />
+    <Content Include="Clase.vb" />
+    <Content Include="PyScripts\compressed.JPEG" />
+    <Content Include="PyScripts\ImageCompressor.py" />
+    <Content Include="pineapple_1_%281%29.ico" />
+    <Content Include="Resources\2.png" />
+    <None Include="Resources\male-reporter.png" />
+    <None Include="Resources\cogwheel.png" />
+    <None Include="Resources\sack.png" />
+    <None Include="Resources\scale.png" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\truck.png" />
+    <None Include="Resources\sergio.JPG" />
+    <None Include="Resources\tractor.png" />
+    <None Include="Resources\location%281%29.png" />
+    <None Include="Resources\science.png" />
+    <None Include="Resources\fondo.jpg" />
+    <None Include="Resources\Product Box-02-WF.png" />
+    <None Include="Resources\User-Login.png" />
+    <None Include="Resources\uno1.png" />
+    <None Include="Resources\Submit-0311.png" />
+    <None Include="Resources\Submit-032.png" />
+    <None Include="Resources\Submit-022.png" />
+    <None Include="Resources\submit-021.png" />
+    <None Include="Resources\seccion11.png" />
+    <None Include="Resources\seccion2.png" />
+    <None Include="Resources\prueba1.png" />
+    <None Include="Resources\mapa1.png" />
+    <None Include="Resources\Login Door1-WF1.png" />
+    <None Include="Resources\Location1.png" />
+    <None Include="Resources\Location -06.png" />
+    <None Include="Resources\Location -03.png" />
+    <None Include="Resources\left1.png" />
+    <None Include="Resources\Image11.png" />
+    <None Include="Resources\Garbage21.png" />
+    <None Include="Resources\Garbage-Open1.png" />
+    <None Include="Resources\Garbage1.png" />
+    <None Include="Resources\Filter-Edit11.png" />
+    <None Include="Resources\Filter-Add11.png" />
+    <None Include="Resources\Filter-Add2.png" />
+    <None Include="Resources\Dropper-WF11.png" />
+    <None Include="Resources\bloque21.png" />
+    <None Include="Resources\bloque11.png" />
+    <None Include="Resources\bloque3.png" />
+    <None Include="Resources\Arrowhead-Right-0111.png" />
+    <None Include="Resources\Arrowhead-Right-012.png" />
+    <None Include="Resources\Arrowhead-Left-0111.png" />
+    <None Include="Resources\Arrowhead-Left-012.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\Add-New1.png" />
+    <Content Include="Resources\Add-New2.png" />
+    <None Include="Resources\Arrowhead-Down.png" />
+    <None Include="Resources\Arrowhead-Down1.png" />
+    <None Include="Resources\Aerosal can-WF.png" />
+    <None Include="Resources\Add-New3.png" />
+    <Content Include="Resources\Arrowhead-Left-011.png" />
+    <None Include="Resources\Arrowhead-Left-013.png" />
+    <None Include="Resources\Arrowhead-Left-014.png" />
+    <Content Include="Resources\Arrowhead-Right-011.png" />
+    <None Include="Resources\Arrowhead-Up.png" />
+    <None Include="Resources\brackets.png" />
+    <None Include="Resources\Arrowhead-Right-013.png" />
+    <None Include="Resources\Arrowhead-Up1.png" />
+    <None Include="Resources\Calendar-Date-02.png" />
+    <Content Include="Resources\Calendar-WF.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\Calender Refresh-WF.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\Command Undo-WF.png" />
+    <Content Include="Resources\Command-Refresh.png" />
+    <Content Include="Resources\Contact Add-WF.png" />
+    <None Include="Resources\dark-blue-background-wallpaper-3 %281%29.jpg" />
+    <None Include="Resources\Data Erase-WF.png" />
+    <None Include="Resources\cooltext262163059186182.png" />
+    <None Include="Resources\cooltext262163155735554.png" />
+    <None Include="Resources\cooltext262163811713507.png" />
+    <None Include="Resources\cooltext262164071271222.png" />
+    <None Include="Resources\cooltext262164200602276.png" />
+    <None Include="Resources\cooltext262164225130840.png" />
+    <None Include="Resources\cooltext262164320471985.png" />
+    <Content Include="Resources\Data-Edit.png" />
+    <None Include="Resources\flag.png" />
+    <None Include="Resources\flag %281%29.png" />
+    <None Include="Resources\flag %282%29.png" />
+    <None Include="Resources\flag %284%29.png" />
+    <None Include="Resources\flagBoton.png" />
+    <None Include="Resources\Folder-New.png" />
+    <None Include="Resources\Folder-New1.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\email %281%29.png" />
+    <None Include="Resources\fondo1.jpg" />
+    <None Include="Resources\Date.png" />
+    <None Include="Resources\Dropper-WF2.png" />
+    <None Include="Resources\Filter-Standard.png" />
+    <None Include="Resources\Employee.png" />
+    <None Include="Resources\fondoprueba.jpg" />
+    <None Include="Resources\Dropper.png" />
+    <None Include="Resources\Expander down - 01.png" />
+    <None Include="Resources\Garbage-Closed2.png" />
+    <None Include="Resources\File Search.png" />
+    <None Include="Resources\Data-Edit1.png" />
+    <None Include="Resources\Dropper1.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Delete2.png" />
+    <None Include="Resources\garbage3.png" />
+    <None Include="Resources\Garbage-Closed3.png" />
+    <Content Include="Resources\fondo2.png" />
+    <None Include="Resources\fondo21.png" />
+    <Content Include="Resources\Hide.png" />
+    <Content Include="Resources\Hide2.png" />
+    <None Include="Resources\House-08.png" />
+    <None Include="Resources\left-arrow %281%29.png" />
+    <None Include="Resources\left-arrow %282%29.png" />
+    <Content Include="Resources\left.png" />
+    <Content Include="Resources\locaBloque.png" />
+    <None Include="Resources\Map.png" />
+    <None Include="Resources\Map1.png" />
+    <None Include="Resources\logoVerde.png" />
+    <Content Include="Resources\Men work-WF.png" />
+    <None Include="Resources\pinaAdd.bmp" />
+    <None Include="Resources\pinaAdd.png" />
+    <None Include="Resources\pineapple %281%29.png" />
+    <None Include="Resources\office-material.png" />
+    <None Include="Resources\pineapple %283%29.png" />
+    <None Include="Resources\Navigation Right-WF.png" />
+    <None Include="Resources\pencil.png" />
+    <Content Include="Resources\pineappleicon.png" />
+    <None Include="Resources\pineappleicon2 - copia.png" />
+    <Content Include="Resources\pineappleicon2.png" />
+    <None Include="Resources\pineappleicon3.png" />
+    <None Include="Resources\Product Box-02-WF1.png" />
+    <None Include="Resources\pineappleicon4.png" />
+    <None Include="Resources\Product Box-02-WF2.png" />
+    <None Include="Resources\Product Box-03-WF.png" />
+    <None Include="Resources\Plus-WF.png" />
+    <None Include="Resources\Printer.png" />
+    <None Include="Resources\pinita.png" />
+    <None Include="Resources\prueba.gif" />
+    <Content Include="Resources\Reload.png" />
+    <None Include="Resources\Settings - 11.png" />
+    <None Include="Resources\Search-WF.png" />
+    <None Include="Resources\Sand Clock -03.png" />
+    <None Include="Resources\Requirement-02-WF.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Save1.png" />
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\right-arrow %281%29.png" />
+    <Content Include="Resources\Shopping Add-WF.png" />
+    <Content Include="Resources\Shopping-Add.png" />
+    <None Include="Resources\Submit-023.png" />
+    <None Include="Resources\Submit-024.png" />
+    <None Include="Resources\Submit-02.png" />
+    <None Include="Resources\Shopping-Download.png" />
+    <None Include="Resources\simply-blue-backgrounds-wallpapers.jpg" />
+    <None Include="Resources\Stop Clock-WF.png" />
+    <None Include="Resources\smooth-blaze.jpg" />
+    <None Include="Resources\Sin título.png" />
+    <None Include="Resources\Sin título1.png" />
+    <None Include="Resources\Sin título2.png" />
+    <None Include="Resources\Sin título3.png" />
+    <None Include="Resources\Sin título4.png" />
+    <None Include="Resources\Sin título5.png" />
+    <None Include="Resources\Sin título6.png" />
+    <Content Include="Resources\Submit-03.png" />
+    <Content Include="Resources\Submit-031.png" />
+    <None Include="Resources\Timer-WF.png" />
+    <None Include="Resources\Timer-WF1.png" />
+    <None Include="Resources\Trash can - 03.png" />
+    <None Include="Resources\test.png" />
+    <None Include="Resources\Transport-Van.png" />
+    <None Include="Resources\Submit-033.png" />
+    <None Include="Resources\Submit-034.png" />
+    <None Include="Resources\Submit-035.png" />
+    <None Include="Resources\To Do List-WF.png" />
+    <None Include="Resources\Transport-Van1.png" />
+    <None Include="Resources\Timer-WF2.png" />
+    <None Include="Resources\Sync-WF.png" />
+    <Content Include="Resources\uno.png" />
+    <Content Include="Resources\User Add-01-WF.png" />
+    <Content Include="Resources\User Add-01-WF1.png" />
+    <None Include="Resources\User Profile 1-WF.png" />
+    <Content Include="Resources\User-Add.png" />
+    <None Include="Resources\Van - 01.png" />
+    <None Include="Resources\User-Login1.png" />
+    <None Include="Resources\User-Login2.png" />
+    <Content Include="Resources\Van.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Examples\UserControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
